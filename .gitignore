@@ -1,0 +1,8 @@
+# Node modules (never commit)
+node_modules/
+
+# macOS system file
+.DS_Store
+
+# Build output
+dist/
