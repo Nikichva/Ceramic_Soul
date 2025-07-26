@@ -1,0 +1,40 @@
+@import "tailwindcss";
+@import "./fontello.css";
+
+@layer base {
+  html {
+    font-family: "Barlow", sans-serif;
+  }
+  body {
+    @apply bg-light;
+  }
+  .title {
+    @apply text-dark not-italic font-medium leading-normal uppercase text-center;
+  }
+  .title-h1-italic {
+    @apply italic text-2xl 2xl:text-[2rem];
+  }
+}
+
+@theme {
+  --color-light: #fafafa;
+  --color-dark: #232323;
+  --color-ui-active: #d9d9d9;
+  --color-ceramic: #c69978;
+  --color-ui-disabled: #d2d2d2;
+  --color-ui-error: #db0c35;
+  --shadow-img-shadow: 5px 5px 10px 0px rgba(0, 0, 0, 0.25);
+  --shadow-btn-shadow: 0 0 10px 1px rgba(0, 0, 0, 0.4) inset;
+}
+
+@layer components {
+  .btn-default {
+    @apply rounded-xs border border-dark text-center text-dark w-57.5 
+    h-12.5 2xl:w-82.5 2xl:h-15 not-italic font-normal leading-normal uppercase text-xl bg-transparent block px-2.5 cursor-pointer xl:hover:bg-dark xl:hover:text-light ease-linear duration-300 xl:active:bg-transparent xl:active:text-dark xl:active:shadow-btn-shadow xl:active:border-0;
+  }
+  .btn-outline {
+    @apply text-dark border-dark hover:bg-dark hover:text-light;
+  }
+}
+@layer utilities {
+}
