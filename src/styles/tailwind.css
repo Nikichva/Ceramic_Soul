@@ -14,6 +14,14 @@
   .title-h1-italic {
     @apply italic text-2xl 2xl:text-[2rem];
   }
+
+  .title-h2 {
+    @apply text-3xl;
+  }
+
+  .title-h3 {
+    @apply text-xl;
+  }
 }
 
 @theme {
