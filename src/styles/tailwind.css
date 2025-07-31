@@ -22,6 +22,15 @@
   .title-h3 {
     @apply text-xl md:text-2xl;
   }
+  label {
+    @apply block text-dark text-sm font-normal leading-[28px];
+  }
+  .touch_input {
+    @apply w-85 h-12 md:w-75 rounded-xs border-1 border-[#E2E1E5] text-dark px-[0.938rem] py-2.5 bg-[#fff] focus:border-none focus:outline focus:outline-dark lg:hover:outline-dark lg:hover:outline placeholder:text-ui-disabled placeholder:text-sm;
+  }
+  textarea {
+    @apply resize-none w-85 md:w-75 h-33 rounded-xs border-1 border-[#E2E1E5] text-dark px-[0.938rem] py-2.5 bg-[#fff] focus:border-none focus:outline focus:outline-dark lg:hover:outline-dark lg:hover:outline placeholder:text-ui-disabled placeholder:text-sm;
+  }
 }
 
 @theme {
