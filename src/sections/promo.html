@@ -12,7 +12,9 @@
         alt="ceramic vase"
         class="mx-auto w-67.5 h-94.5 shadow-img-shadow md:w-57.5 md:h-80 2xl:w-82.5 2xl:h-115"
       />
-      <button class="btn-default mx-auto mt-4.5 2xl:mt-12.5">shop now</button>
+      <button class="btn-default btn-outline mx-auto mt-4.5 2xl:mt-12.5">
+        shop now
+      </button>
     </div>
   </div>
 </div>
@@ -66,16 +68,16 @@
     <div
       class="mt-15 md:mt-11 lg:mt-20 flex relative lg:grid lg:grid-cols-4 lg:gap-10 2xl:grid-cols-5 2xl:gap-36.5"
     >
-      <div class="lg:col-span-2">
+      <div class="lg:col-span-2 2xl:w-143">
         <img
           src="/src/assets/img/form/tea.jpg"
           alt="tea"
-          class="hidden lg:block shadow-img-shadow w-full"
+          class="hidden lg:block shadow-img-shadow w-full 2xl:h-89"
         />
       </div>
       <div class="lg:col-span-2 2xl:col-span-3">
         <form action="#">
-          <fieldset>
+          <fieldset class="2xl:flex 2xl:gap-11.5">
             <div>
               <label for="name">Name</label>
               <input
@@ -84,6 +86,7 @@
                 name="name"
                 placeholder="Name"
                 class="touch_input"
+                required
               />
             </div>
             <div>
@@ -94,6 +97,7 @@
                 name="email"
                 placeholder="Email"
                 class="touch_input"
+                required
               />
             </div>
           </fieldset>
@@ -102,10 +106,12 @@
             name="question"
             id="question"
             placeholder="Question"
+            required
           ></textarea>
 
           <label for="checkbox" class="mt-5 flex items-center"
             ><input
+              required
               type="checkbox"
               id="checkbox"
               class="mr-[0.938rem] w-[0.938rem] h-[0.938rem]"
@@ -113,6 +119,7 @@
             I agree with the
             <a href="#" class="text-[#A22DC6] ml-0.5">terms</a></label
           >
+          <button class="btn-default btn-send mt-5">send request</button>
         </form>
       </div>
       <img
