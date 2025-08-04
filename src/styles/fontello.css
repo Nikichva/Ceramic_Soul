@@ -11,6 +11,7 @@
   font-family: "fontello";
   font-style: normal;
   font-weight: normal;
+  speak: never;
 
   display: inline-block;
   text-decoration: inherit;
@@ -53,6 +54,12 @@
 .icon-facebook-circled:before {
   content: "\e803";
 } /* '' */
+.icon-left-open:before {
+  content: "\e804";
+} /* '' */
+.icon-right-open:before {
+  content: "\e805";
+} /* '' */
 .icon-shop:before {
   content: "\e835";
 } /* '' */
