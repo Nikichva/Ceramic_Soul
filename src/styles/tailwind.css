@@ -22,6 +22,12 @@
   .title-h3 {
     @apply text-xl md:text-2xl;
   }
+  .footer-title {
+    @apply text-base font-medium text-light uppercase;
+  }
+  .footer-text {
+    @apply text-base font-normal text-light;
+  }
 }
 
 @theme {
@@ -43,7 +49,7 @@
     @apply w-57.5 h-12.5 2xl:w-82.5 2xl:h-15 text-xl lg:hover:bg-dark lg:hover:text-light lg:active:bg-transparent lg:active:text-dark lg:active:shadow-btn-shadow lg:active:border-0;
   }
   .btn-send {
-    @apply w-55 h-10 text-base focus:outline-ceramic focus:outline focus:border-ceramic lg:active:outline-ceramic lg:active:outline lg:active:border-ceramic lg:active:text-dark lg:hover:text-ceramic lg:hover:border-ceramic lg:disabled:text-ui-disabled lg:disabled:border-ui-disabled;
+    @apply w-55 h-10 text-base focus:outline-ceramic focus:outline focus:border-ceramic lg:active:outline-ceramic lg:active:outline lg:active:border-ceramic lg:active:text-dark lg:hover:text-ceramic lg:hover:border-ceramic disabled:text-ui-disabled disabled:border-ui-disabled;
   }
   label {
     @apply block text-dark text-sm font-normal leading-[28px];
@@ -62,5 +68,11 @@
   }
   .works__slider-nav {
     @apply hidden lg:block text-2xl absolute top-[50%] transform-gpu top-[50%];
+  }
+  .footer_input {
+    @apply w-73 h-8 md:w-75 bg-transparent placeholder:text-ui-active border-b-1 border-ui-active pb-4 text-light text-sm font-normal;
+  }
+  .btn-submit {
+    @apply w-22.5 h-10 rounded-xs border border-light text-center text-light not-italic font-normal leading-normal uppercase bg-transparent block px-4 cursor-pointer text-base disabled:border-ui-disabled disabled:text-ui-disabled;
   }
 }
