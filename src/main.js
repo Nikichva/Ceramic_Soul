@@ -20,6 +20,32 @@ const sectionList = ["header.html", "promo.html", "footer.html"];
     const html = await res.text();
     app.insertAdjacentHTML("beforeend", html);
   }
+
+  const burger = document.querySelector(".burger");
+  const close = document.querySelector(".header__menu-close");
+  const menu = document.querySelector(".header__menu");
+  // media query for MD breakpoint
+  const md = window.matchMedia("(min-width: 768px)");
+
+  function openMenu() {
+    menu.classList.add("transform-[translateX(0%)]", "opacity-100");
+    document.body.style.overflow = "hidden";
+  }
+
+  function closeMenu() {
+    menu.classList.remove("transform-[translateX(0%)]", "opacity-100");
+    document.body.style.overflow = "";
+  }
+  burger.addEventListener("click", openMenu);
+  close.addEventListener("click", closeMenu);
+  // When media query are changed
+  md.addEventListener("change", (e) => {
+    if (e.matches) {
+      // Now ≥768px — will reset menu and overflow
+      closeMenu();
+    }
+  });
+
   // init Swiper:
   const swiper = new Swiper(".swiper", {
     slidesPerView: 1,

@@ -4,11 +4,30 @@
     alt="potter"
     class="hidden absolute xl:block h-158.5 top-0 left-0 xl:w-[clamp(450px,37.5vw,640px)] 2xl:h-225 object-cover"
   />
+
   <div class="px-2.5 md:px-6 container mx-auto">
     <div>
+      <div
+        class="header__menu pt-12.5 pb-12.5 px-2.5 transition duration-300 w-screen h-screen bg-light fixed top-0 left-0 transform-[translateX(-100%)] opacity-0 md:hidden z-50"
+      >
+        <div class="">
+          <span
+            class="header__menu-close block icon-cancel text-dark text-3xl md:invisible -ml-1.5"
+          ></span>
+        </div>
+        <ul
+          class="ml-3.5 pt-12.5 flex flex-col justify-center gap-6.5 uppercase text-dark font-normal text-xl"
+        >
+          <li><a href="#">catalog</a></li>
+          <li><a href="#">blog</a></li>
+          <li><a href="#">about</a></li>
+        </ul>
+      </div>
       <div class="flex justify-between">
         <div class="pr-11">
-          <span class="block icon-menu text-dark text-xl md:invisible"></span>
+          <span
+            class="block icon-menu text-dark text-xl md:invisible burger"
+          ></span>
         </div>
         <a href="#" class="w-25 h-25 2xl:w-37.5 2xl:h-38"
           ><img src="/src/assets/logo.png" alt="logo"
