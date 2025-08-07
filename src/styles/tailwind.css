@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,500;1,400&display=swap");
 @import "tailwindcss";
 @import "./fontello.css";
 
@@ -67,12 +68,33 @@
     @apply !bg-ceramic;
   }
   .works__slider-nav {
-    @apply hidden lg:block text-2xl absolute top-[50%] transform-gpu top-[50%];
+    @apply hidden lg:block text-2xl absolute top-[50%] transform-gpu;
   }
   .footer_input {
     @apply w-73 h-8 md:w-75 bg-transparent placeholder:text-ui-active border-b-1 border-ui-active pb-4 text-light text-sm font-normal;
   }
   .btn-submit {
     @apply w-22.5 h-10 rounded-xs border border-light text-center text-light not-italic font-normal leading-normal uppercase bg-transparent block px-4 cursor-pointer text-base disabled:border-ui-disabled disabled:text-ui-disabled;
+  }
+  .catalog__tab {
+    @apply text-xl uppercase text-[#000] font-medium relative cursor-pointer;
+  }
+  .catalog__tab_active::before {
+    @apply absolute w-full h-0.5 bg-[#000] content-[""] -bottom-0.5;
+  }
+  .catalog__card_text {
+    @apply px-3 pt-2.5 pb-4 border-r-1 border-b-1 border-l-1 border-dark text-[#000] text-base font-medium;
+  }
+  .catalog__content_decoration::before {
+    @apply md:absolute w-50 h-[1px] bg-dark content-[""] top-0;
+  }
+  .catalog__content_decoration::after {
+    @apply md:absolute w-[1px] h-50 bg-dark content-[""] top-0;
+  }
+  .catalog__content-item {
+    @apply md:pt-2.5 md:pl-2.5 xl:pt-6 xl:pl-6  flex-wrap items-start justify-start gap-5 xl:gap-8.5 2xl:gap-x-20.5;
+  }
+  .catalog__image {
+    @apply w-full h-49.5 2xl:h-45 object-cover;
   }
 }
