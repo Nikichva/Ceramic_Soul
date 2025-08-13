@@ -66,6 +66,12 @@
   textarea {
     @apply resize-none w-85 md:w-75 h-33 rounded-xs border-1 border-[#E2E1E5] text-dark px-[0.938rem] py-2.5 bg-[#fff] focus:border-none focus:outline focus:outline-dark lg:hover:outline-dark lg:hover:outline placeholder:text-ui-disabled placeholder:text-sm;
   }
+  #promo_form .just-validate-error-field {
+    @apply border-none outline outline-ui-error;
+  }
+  #form_newsletter .just-validate-error-field {
+    @apply placeholder:text-ui-error border-ui-error;
+  }
   .swiper-pagination-bullet {
     @apply !bg-dark !w-2.5 !h-2.5 !rounded-none !opacity-[1];
   }

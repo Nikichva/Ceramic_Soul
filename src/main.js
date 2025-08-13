@@ -4,6 +4,8 @@ import "/src/styles/fontello.css";
 import "/src/styles/globals.css";
 import Swiper from "swiper";
 import { Navigation, Pagination } from "swiper/modules";
+import JustValidate from "just-validate";
+
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
@@ -99,5 +101,104 @@ const sectionList = ["header.html", bodySection, "footer.html"];
     contents.forEach((c, i) => (c.style.display = i === 0 ? "flex" : "none"));
   } catch (e) {}
 
-  // Обратите внимание, что значение block (в двух местах) можно спокойно поменять на flex, если вам это необходимо
+  // const validate = new JustValidate("#form");
+
+  try {
+    const validator = new JustValidate("#promo_form");
+
+    validator
+      .addField("#name", [
+        {
+          rule: "required",
+          errorMessage: "Fill the name",
+        },
+        {
+          rule: "minLength",
+          value: 2,
+          errorMessage: "Min 2 char!",
+        },
+      ])
+      .addField("#email", [
+        {
+          rule: "required",
+          errorMessage: "Fill the email",
+        },
+        {
+          rule: "email",
+        },
+      ])
+      .addField(
+        "#question",
+        [
+          {
+            rule: "required",
+            errorMessage: "Question is required",
+          },
+          {
+            rule: "minLength",
+            value: 5,
+          },
+        ],
+        {
+          errorsContainer: document
+            .querySelector("#question")
+            .parentElement.querySelector(".error-message"),
+        }
+      )
+      .addField(
+        "#checkbox",
+        [
+          {
+            rule: "required",
+            errorMessage: "Agree with the terms",
+          },
+        ],
+        {
+          errorsContainer: document
+            .querySelector("#checkbox")
+            .parentElement.parentElement.querySelector(
+              ".checkbox-error-message"
+            ),
+        }
+      );
+  } catch (e) {}
+  try {
+    const newsletterValidator = new JustValidate("#form_newsletter");
+
+    newsletterValidator
+
+      .addField(
+        "#email-footer",
+        [
+          {
+            rule: "required",
+            errorMessage: "Fill the email",
+          },
+          {
+            rule: "email",
+          },
+        ],
+        {
+          errorsContainer: document
+            .querySelector("#email-footer")
+            .parentElement.parentElement.querySelector(".error-message"),
+        }
+      )
+      .addField(
+        "#footer-checkbox",
+        [
+          {
+            rule: "required",
+            errorMessage: "Agree with the terms",
+          },
+        ],
+        {
+          errorsContainer: document
+            .querySelector("#footer-checkbox")
+            .parentElement.parentElement.querySelector(
+              ".checkbox-error-message"
+            ),
+        }
+      );
+  } catch (e) {}
 })();

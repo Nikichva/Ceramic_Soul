@@ -81,7 +81,7 @@
         />
       </div>
       <div class="lg:col-span-2 2xl:col-span-3">
-        <form action="#">
+        <form action="#" id="promo_form">
           <fieldset class="2xl:flex 2xl:gap-11.5">
             <div>
               <label for="name">Name</label>
@@ -113,6 +113,7 @@
             placeholder="Question"
             required
           ></textarea>
+          <div class="error-message"></div>
 
           <label for="checkbox" class="mt-5 flex items-center"
             ><input
@@ -124,6 +125,7 @@
             I agree with the
             <a href="#" class="text-[#A22DC6] ml-0.5">terms</a></label
           >
+          <div class="checkbox-error-message"></div>
           <button class="btn-default btn-send mt-5">send request</button>
         </form>
       </div>
