@@ -13,9 +13,9 @@ import "swiper/css/pagination";
 const pageMap = {
   "/": "promo.html",
   "/index.html": "promo.html",
-  "/catalog.html": "catalog.html",
-  "/blog.html": "blog.html",
-  "/about.html": "about.html",
+  "/catalog.html": "catalog.body.html",
+  "/blog.html": "blog.body.html",
+  "/about.html": "about.body.html",
 };
 
 // pick fragment or default to promo.html
@@ -25,7 +25,7 @@ const sectionList = ["header.html", bodySection, "footer.html"];
 (async () => {
   const app = document.getElementById("app");
   for (const file of sectionList) {
-    const res = await fetch(`/src/sections/${file}`);
+    const res = await fetch(`/sections/${file}`);
     const html = await res.text();
     app.insertAdjacentHTML("beforeend", html);
   }
