@@ -4,6 +4,8 @@ import { resolve } from "path";
 import viteImagemin from "vite-plugin-imagemin";
 
 export default defineConfig({
+  base: "/Ceramic_Soul/",
+  appType: "mpa",
   plugins: [
     tailwindcss(),
     viteImagemin({
@@ -35,6 +37,7 @@ export default defineConfig({
     }),
   ],
   build: {
+    outDir: "docs",
     rollupOptions: {
       input: {
         main: resolve(__dirname, "index.html"),

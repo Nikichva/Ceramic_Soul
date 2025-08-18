@@ -10,12 +10,16 @@ import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 
+const BASE = import.meta.env.BASE_URL; // "/" в dev, "/Ceramic_Soul/" на Pages
+
+const withBase = (p = "") => `${BASE}${p}`; // "" -> "/Ceramic_Soul/" или "/"
+
 const pageMap = {
-  "/": "promo.html",
-  "/index.html": "promo.html",
-  "/catalog.html": "catalog.body.html",
-  "/blog.html": "blog.body.html",
-  "/about.html": "about.body.html",
+  [withBase()]: "promo.html", // "/Ceramic_Soul/"  или "/"
+  [withBase("index.html")]: "promo.html",
+  [withBase("catalog.html")]: "catalog.body.html",
+  [withBase("blog.html")]: "blog.body.html",
+  [withBase("about.html")]: "about.body.html",
 };
 
 // pick fragment or default to promo.html
@@ -25,7 +29,7 @@ const sectionList = ["header.html", bodySection, "footer.html"];
 (async () => {
   const app = document.getElementById("app");
   for (const file of sectionList) {
-    const res = await fetch(`/sections/${file}`);
+    const res = await fetch(`${BASE}sections/${file}`);
     const html = await res.text();
     app.insertAdjacentHTML("beforeend", html);
   }

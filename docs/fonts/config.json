@@ -1,0 +1,64 @@
+{
+  "name": "",
+  "css_prefix_text": "icon-",
+  "css_use_suffix": false,
+  "hinting": true,
+  "units_per_em": 1000,
+  "ascent": 850,
+  "glyphs": [
+    {
+      "uid": "7222571caa5c15f83dcfd447c58d68d9",
+      "css": "search",
+      "code": 59392,
+      "src": "entypo"
+    },
+    {
+      "uid": "83a806d41893e8bc6fac601669c76cd2",
+      "css": "shop",
+      "code": 59445,
+      "src": "maki"
+    },
+    {
+      "uid": "559647a6f430b3aeadbecd67194451dd",
+      "css": "menu",
+      "code": 61641,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "c709da589c923ba3c2ad48d9fc563e93",
+      "css": "cancel",
+      "code": 59393,
+      "src": "entypo"
+    },
+    {
+      "uid": "cc8e2a0eff0356811984b84a868524f8",
+      "css": "check-empty",
+      "code": 59394,
+      "src": "elusive"
+    },
+    {
+      "uid": "33cea6d7bd699348c0d593e105361a51",
+      "css": "facebook-circled",
+      "code": 59395,
+      "src": "typicons"
+    },
+    {
+      "uid": "4c1ef492f1d2c39a2250ae457cee2a6e",
+      "css": "instagram",
+      "code": 61805,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "da851b7c1f84ee83f93b29ae613558dc",
+      "css": "pinterest-circled",
+      "code": 61650,
+      "src": "fontawesome"
+    },
+    {
+      "uid": "4a74a0f87d4089efe7aba1825bff4193",
+      "css": "copyright",
+      "code": 61945,
+      "src": "fontawesome"
+    }
+  ]
+}
